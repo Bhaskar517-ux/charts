@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>ChartJS Demo</title>
+        
+        
+        <script src="https://code.angularjs.org/1.5.0/angular.js"></script>
+        <script src="node_modules/chart.js/dist/Chart.js"></script>
+       <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+       <script src="/app/app.js"></script>
+       <script src="/app/controllers/mycontroller.js"></script> 
+       <script src="/app/directives/barDirective.js"></script>  
+       <script src="/app/directives/lineDirective.js"></script>
+       <script src="/app/directives/polarAreaDirective.js"></script>
+        <script src="/app/directives/barlineDirective.js"></script>
+       
+          
+    </head>
+          
+          <body ng-app="myApp">
+            <h1>CHATRSjs</h1>
+            <div  ng-controller="mycontroller">
+              <bar-directive data="chartData" options="chartOptions">
+                <canvas></canvas>
+              </bar-directive>
+
+              <line-directive data="publicChart" options="chartOptions">
+                <canvas></canvas>
+              </line-directive>
+
+              <polar-area-directive  data="polarChart" options="chartOptions">
+                <canvas></canvas>
+              </polar-area-directive>
+                   
+              <barline-directive data="mixedChart" options="chartOptions">
+                <canvas></canvas>
+              </barline-directive>
+
+             </div>
+          </body>
+    
